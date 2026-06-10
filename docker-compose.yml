@@ -1,0 +1,10 @@
+services:
+  build-time-sender-test:
+    build:
+      context: .
+      args:
+        BUILD_TIME: ${BUILD_TIME:-unknown}
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CHAT_ID=${CHAT_ID}
+    restart: unless-stopped
