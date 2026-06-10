@@ -6,6 +6,6 @@ git pull
 #docker run --rm -e BOT_TOKEN="${BOT_TOKEN}" -e CHAT_ID="${CHAT_ID}" build-time-sender
 #docker run -d --name build-time-sender -e BOT_TOKEN="${BOT_TOKEN}" -e CHAT_ID="${CHAT_ID}" build-time-sender
 
-BUILD_TIME="$(date -u +%Y-%m-%dT%H:%M:%SZ)" docker compose up build --no-cache
+BUILD_TIME="$(date -u +%Y-%m-%dT%H:%M:%SZ)" docker compose build --no-cache
 docker compose up -d
 
