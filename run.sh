@@ -1,6 +1,7 @@
 
 export $(grep -v '^#' .env | xargs)
 
+cd "${WORK_DIR}"
 git switch main
 git pull
 docker run --rm -e BOT_TOKEN="${BOT_TOKEN}" -e CHAT_ID="${CHAT_ID}" build-time-sender
