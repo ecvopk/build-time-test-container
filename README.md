@@ -8,5 +8,5 @@ git clone test-container.git
 cp .env.example .env
 nano .env # Provide env vars in editor
 chmod +x run.sh
-run.sh 
+bash ./run.sh 
 ```

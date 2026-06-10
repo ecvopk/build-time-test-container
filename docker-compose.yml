@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        BUILD_TIME: ${BUILD_TIME:-unknown01}
+        BUILD_TIME: ${BUILD_TIME:-unknown}
     environment:
       - BOT_TOKEN=${BOT_TOKEN}
       - CHAT_ID=${CHAT_ID}
