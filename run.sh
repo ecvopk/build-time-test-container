@@ -5,4 +5,5 @@ cd "${WORK_DIR}"
 git switch main
 git pull
 docker build --build-arg BUILD_TIME="$(date -u +%Y-%m-%dT%H:%M:%SZ)" -t build-time-sender .
-docker run --rm -e BOT_TOKEN="${BOT_TOKEN}" -e CHAT_ID="${CHAT_ID}" build-time-sender
+#docker run --rm -e BOT_TOKEN="${BOT_TOKEN}" -e CHAT_ID="${CHAT_ID}" build-time-sender
+docker run -d --name build-time-sender -e BOT_TOKEN="ваш_бот_токен" -e CHAT_ID="ваш_chat_id" build-time-sende
